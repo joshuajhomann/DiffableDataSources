@@ -1,0 +1,34 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CombineCocoa",
+        "repositoryURL": "https://github.com/CombineCommunity/CombineCocoa",
+        "state": {
+          "branch": null,
+          "revision": "749c16693b3a6fa1af2b95256fda734e7ec2258b",
+          "version": "0.2.2"
+        }
+      },
+      {
+        "package": "Nuke",
+        "repositoryURL": "https://github.com/kean/Nuke",
+        "state": {
+          "branch": null,
+          "revision": "200016df418ed8dc70ba918d52c29634f434541c",
+          "version": "9.5.0"
+        }
+      },
+      {
+        "package": "Preview",
+        "repositoryURL": "https://github.com/joshuajhomann/Preview.git",
+        "state": {
+          "branch": null,
+          "revision": "9e463fdee264c8976646fc21ed88e14bc0d99ef7",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

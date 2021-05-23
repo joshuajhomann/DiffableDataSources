@@ -8,3 +8,5 @@ We covered two view controllers:
 2. A Declarative NSDiffableDatasources tableview
 
 We will continue the series with a discussion, of MVVM, generic tableViews, UICollectionViewCompositionalLayout and cell configuration in iOS 14.
+
+Updated with MVVM and UICollectionViewCompositionalLayout

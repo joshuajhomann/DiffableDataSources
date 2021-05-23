@@ -10,7 +10,7 @@ import Foundation
 import SwiftUI
 
 // MARK: - Pokemon
-struct Pokemon: Codable, Hashable {
+struct Pokemon: Codable, Hashable, Identifiable {
   let id: String
   let pkdxID, nationalID: Int
   let name: String

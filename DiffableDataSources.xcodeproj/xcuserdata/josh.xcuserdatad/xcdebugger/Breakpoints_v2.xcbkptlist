@@ -7,32 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "BB0CAFBE-43E2-40E6-9E26-E65106F37D6E"
+            uuid = "91A573A9-2749-4323-B6AB-FB53CF973BFC"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "DiffableDataSources/PokemonMVCViewController.swift"
+            filePath = "DiffableDataSources/PokemonDiffableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "init()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3F7B3C9D-939D-4736-BD33-0C5EE97D54CB"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DiffableDataSources/PokemonTableViewCell.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "init(style:reuseIdentifier:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

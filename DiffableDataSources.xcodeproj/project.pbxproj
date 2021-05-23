@@ -22,6 +22,10 @@
 		033CEACA262B4011002EB788 /* PokemonDiffableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033CEAC9262B4011002EB788 /* PokemonDiffableViewController.swift */; };
 		033CEACD262B4024002EB788 /* PokemonMVVMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033CEACC262B4024002EB788 /* PokemonMVVMViewController.swift */; };
 		033CEAD1262B420C002EB788 /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 033CEAD0262B420C002EB788 /* CombineCocoa */; };
+		039D04A6263470AC002C0329 /* PokemonSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039D04A5263470AC002C0329 /* PokemonSwiftUIView.swift */; };
+		039D04A9263471EC002C0329 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039D04A8263471EC002C0329 /* ImageView.swift */; };
+		039D04AD26347224002C0329 /* FetchImage in Frameworks */ = {isa = PBXBuildFile; productRef = 039D04AC26347224002C0329 /* FetchImage */; };
+		039D04B0263473D7002C0329 /* PokemonCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039D04AF263473D7002C0329 /* PokemonCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +43,9 @@
 		033CEABE262B3808002EB788 /* PokemonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTableViewCell.swift; sourceTree = "<group>"; };
 		033CEAC9262B4011002EB788 /* PokemonDiffableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDiffableViewController.swift; sourceTree = "<group>"; };
 		033CEACC262B4024002EB788 /* PokemonMVVMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonMVVMViewController.swift; sourceTree = "<group>"; };
+		039D04A5263470AC002C0329 /* PokemonSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonSwiftUIView.swift; sourceTree = "<group>"; };
+		039D04A8263471EC002C0329 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		039D04AF263473D7002C0329 /* PokemonCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +56,7 @@
 				033CEAC3262B3C46002EB788 /* Preview in Frameworks */,
 				033CEAD1262B420C002EB788 /* CombineCocoa in Frameworks */,
 				033CEAC7262B3C59002EB788 /* Nuke in Frameworks */,
+				039D04AD26347224002C0329 /* FetchImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,9 +86,12 @@
 				033CEA86262B2FEF002EB788 /* AppDelegate.swift */,
 				033CEA88262B2FEF002EB788 /* SceneDelegate.swift */,
 				033CEA9C262B307B002EB788 /* TabbarController.swift */,
+				039D04A5263470AC002C0329 /* PokemonSwiftUIView.swift */,
+				039D04A8263471EC002C0329 /* ImageView.swift */,
 				033CEABB262B322C002EB788 /* PokemonMVCViewController.swift */,
 				033CEAC9262B4011002EB788 /* PokemonDiffableViewController.swift */,
 				033CEACC262B4024002EB788 /* PokemonMVVMViewController.swift */,
+				039D04AF263473D7002C0329 /* PokemonCollectionViewController.swift */,
 				033CEABE262B3808002EB788 /* PokemonTableViewCell.swift */,
 				033CEA8C262B2FF1002EB788 /* Assets.xcassets */,
 				033CEA91262B2FF1002EB788 /* LaunchScreen.storyboard */,
@@ -127,6 +138,7 @@
 				033CEAC2262B3C46002EB788 /* Preview */,
 				033CEAC6262B3C59002EB788 /* Nuke */,
 				033CEAD0262B420C002EB788 /* CombineCocoa */,
+				039D04AC26347224002C0329 /* FetchImage */,
 			);
 			productName = DiffableDataSources;
 			productReference = 033CEA83262B2FEF002EB788 /* DiffableDataSources.app */;
@@ -159,6 +171,7 @@
 				033CEAC1262B3C46002EB788 /* XCRemoteSwiftPackageReference "Preview" */,
 				033CEAC5262B3C59002EB788 /* XCRemoteSwiftPackageReference "Nuke" */,
 				033CEACF262B420C002EB788 /* XCRemoteSwiftPackageReference "CombineCocoa" */,
+				039D04AB26347224002C0329 /* XCRemoteSwiftPackageReference "FetchImage" */,
 			);
 			productRefGroup = 033CEA84262B2FEF002EB788 /* Products */;
 			projectDirPath = "";
@@ -188,9 +201,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				039D04A9263471EC002C0329 /* ImageView.swift in Sources */,
 				033CEACD262B4024002EB788 /* PokemonMVVMViewController.swift in Sources */,
+				039D04B0263473D7002C0329 /* PokemonCollectionViewController.swift in Sources */,
 				033CEA87262B2FEF002EB788 /* AppDelegate.swift in Sources */,
 				033CEAB0262B3200002EB788 /* Pokemon.swift in Sources */,
+				039D04A6263470AC002C0329 /* PokemonSwiftUIView.swift in Sources */,
 				033CEA9D262B307B002EB788 /* TabbarController.swift in Sources */,
 				033CEABF262B3808002EB788 /* PokemonTableViewCell.swift in Sources */,
 				033CEABC262B322C002EB788 /* PokemonMVCViewController.swift in Sources */,
@@ -419,6 +435,14 @@
 				minimumVersion = 0.2.2;
 			};
 		};
+		039D04AB26347224002C0329 /* XCRemoteSwiftPackageReference "FetchImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/FetchImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -436,6 +460,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 033CEACF262B420C002EB788 /* XCRemoteSwiftPackageReference "CombineCocoa" */;
 			productName = CombineCocoa;
+		};
+		039D04AC26347224002C0329 /* FetchImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 039D04AB26347224002C0329 /* XCRemoteSwiftPackageReference "FetchImage" */;
+			productName = FetchImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

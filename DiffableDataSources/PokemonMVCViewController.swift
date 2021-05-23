@@ -8,23 +8,13 @@
 import UIKit
 
 final class PokemonMVCViewController: UIViewController {
+  private let tableView = UITableView()
+  private let searchBar = UISearchBar()
   private var pokemon: [Pokemon] = Pokemon.all
   init() {
     super.init(nibName: nil, bundle: nil)
     view.backgroundColor = .systemBackground
-    let tableView = UITableView()
-    let searchBar = UISearchBar()
-    let searchAction = UIAction { [weak self, textField = searchBar.searchTextField] _ in
-      guard let self = self else { return }
-      let text = textField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
-      defer { tableView.reloadData() }
-      guard !text.isEmpty else { return self.pokemon = Pokemon.all }
-      self.pokemon = Pokemon.all.filter { pokemon in
-        pokemon.name.range(of: text, options: .caseInsensitive) != nil ||
-        pokemon.pokemonDescription.range(of: text, options: .caseInsensitive) != nil
-      }
-    }
-    searchBar.searchTextField.addAction(searchAction, for: .editingChanged)
+    searchBar.searchTextField.addTarget(self, action: #selector(search), for: .editingChanged)
     navigationItem.title = "MVC"
     tableView.translatesAutoresizingMaskIntoConstraints = false
     searchBar.translatesAutoresizingMaskIntoConstraints = false
@@ -42,6 +32,17 @@ final class PokemonMVCViewController: UIViewController {
     tableView.dataSource = self
     tableView.register(PokemonTableViewCell.self, forCellReuseIdentifier: PokemonTableViewCell.reuseIdentifier)
   }
+
+  @objc private func search() {
+    let text = searchBar.searchTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+    defer { tableView.reloadData() }
+    guard !text.isEmpty else { return pokemon = Pokemon.all }
+    pokemon = Pokemon.all.filter { pokemon in
+      pokemon.name.range(of: text, options: .caseInsensitive) != nil ||
+      pokemon.pokemonDescription.range(of: text, options: .caseInsensitive) != nil
+    }
+  }
+
   @available(*, unavailable)
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")

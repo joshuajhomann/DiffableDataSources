@@ -11,6 +11,15 @@
         }
       },
       {
+        "package": "FetchImage",
+        "repositoryURL": "https://github.com/kean/FetchImage",
+        "state": {
+          "branch": null,
+          "revision": "cac844a0dea908c6e068fc8c6a0f949179c7f876",
+          "version": "0.4.0"
+        }
+      },
+      {
         "package": "Nuke",
         "repositoryURL": "https://github.com/kean/Nuke",
         "state": {

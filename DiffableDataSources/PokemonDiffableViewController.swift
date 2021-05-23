@@ -7,10 +7,13 @@
 
 import CombineCocoa
 import Combine
+import Preview
+import SwiftUI
 import UIKit
 
 final class PokemonDiffableViewController: UIViewController {
   private var subscriptions = Set<AnyCancellable>()
+
   private enum Section: Hashable, CaseIterable {
     case pokemon
   }
@@ -22,7 +25,7 @@ final class PokemonDiffableViewController: UIViewController {
     view.backgroundColor = .systemBackground
     let tableView = UITableView()
     let searchBar = UISearchBar()
-    navigationItem.title = "MVC"
+    navigationItem.title = "Diffable"
     tableView.translatesAutoresizingMaskIntoConstraints = false
     searchBar.translatesAutoresizingMaskIntoConstraints = false
     view.addSubview(searchBar)
@@ -45,16 +48,25 @@ final class PokemonDiffableViewController: UIViewController {
         return cell
       })
 
-    searchBar
-      .searchTextField
-      .textPublisher
+    let text = PassthroughSubject<String?, Never>()
+    searchBar.searchTextField.addAction(
+      .init { _ in text.send(searchBar.searchTextField.text)},
+      for: .editingChanged
+    )
+
+    text
+      .prepend("")
       .receive(on: DispatchQueue.global(qos: .userInitiated))
       .compactMap { $0 }
-      .map { text in
-        Pokemon.all.filter { pokemon in
-          pokemon.name.range(of: text, options: .caseInsensitive) != nil ||
-          pokemon.pokemonDescription.range(of: text, options: .caseInsensitive) != nil
-        }
+      .map { text -> [Pokemon] in
+        text.isEmpty
+          ? Pokemon.all
+          : Pokemon.all.filter { pokemon in
+            pokemon.name.range(
+              of: text,
+              options: .caseInsensitive) != nil || pokemon.pokemonDescription.range(of: text, options: .caseInsensitive
+              ) != nil
+          }
       }
       .receive(on: DispatchQueue.main)
       .sink(receiveValue: { pokemon in
@@ -71,5 +83,16 @@ final class PokemonDiffableViewController: UIViewController {
   @available(*, unavailable)
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
+  }
+}
+
+@available(iOS 13.0, *)
+struct Previews: PreviewProvider {
+  static var previews: some View {
+    Group {
+      Preview.makeInNavigationController(PokemonDiffableViewController())
+      Preview.makeInNavigationController(PokemonDiffableViewController())
+        .previewDevice("iPhone 12")
+    }
   }
 }
